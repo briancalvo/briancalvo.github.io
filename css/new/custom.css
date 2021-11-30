@@ -707,7 +707,48 @@ body.opened .profile .down{
 }
 
 /*---------------------------------------------------*/
-/*	14) KURA MEDIA QUERIES (FOR SMALL DEVIVES)
+/*	11) COPYRIGHT
+/*---------------------------------------------------*/
+
+.copyright{
+    background-color: #000;
+    clear: both;
+	float: left;
+	height: auto;
+    padding: 28px 0px 32px 0px;
+    text-align: center;
+	width: 100%;	
+}
+.copyright .copyright_inner{
+	align-items: center;
+    clear: both;
+    display: flex;
+	float: left;
+	height: auto;
+	justify-content: space-between;	
+	width: 100%;	
+}
+.copyright .text p{
+	color: #fff;
+}
+.copyright .social ul{
+	list-style-type: none;
+    margin: 0px;	
+}
+.copyright .social ul li{
+	display: inline-block;
+    margin: 0px 20px 0px 0px;	
+}
+.copyright .social ul li:last-child{
+	margin-right: 0px;
+}
+.copyright .social ul li a{
+	color: #fff;
+    text-decoration: none;	
+}
+
+/*---------------------------------------------------*/
+/*	14) MEDIA QUERIES (SMALL DEVIVES)
 /*---------------------------------------------------*/
 
 @media (max-width: 1400px) {
@@ -750,8 +791,6 @@ body.opened .profile .down{
 	.contact .right{width: 100%;padding-left: 0px;}
 	.modalbox .box_inner{width: 500px;}
 	.modalbox .close .svg{width: 40px;height: 40px;}
-	
-	.kura_tm_intro .demos img{max-width: 100px;}
 }
 @media (max-width: 768px) {
 	.profile .job{font-size: 30px;}
