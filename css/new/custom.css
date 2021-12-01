@@ -71,7 +71,7 @@ img.svg{
     margin-left: auto;
     margin-right: auto;
     max-width: 1250px;
-    padding: 0xp 40px;
+    padding: 0px 40px;
     position: relative;
     width: 100%;
 }
@@ -308,6 +308,78 @@ body.opened .navbar{
 
 /*
 --------------------------------------------------
+	                03) MENU MÓVIL
+--------------------------------------------------
+*/
+
+.mobile_menu{
+    display: none;
+    height: auto;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+}
+.mobile_menu .mobile_menu_inner{
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    clear: both;
+    float: left;
+    height: auto;
+    padding: 15px 30px 15px 40px;
+    width: 100%;
+}
+.mobile_menu .mobile_in{
+    align-items: center;
+    clear: both;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    width: 100%;
+}
+.mobile_menu .mobile_in .logo img{
+    max-height: 50px;
+    max-width: 140px;
+}
+.mobile_menu .trigger{
+    line-height: 0;
+}
+.mobile_menu .dropdown{
+    background-color: #fff;
+    clear: both;
+    display: none;
+    float: left;
+    height: auto;
+    width: 100%;
+}
+.mobile_menu .dropdown .dropdown_inner{
+    clear: both;
+    float: left;
+    height: auto;
+    padding: 25px 40px;
+    width: 100%;
+}
+.mobile_menu .dropdown .dropdown_inner ul{
+    list-style-type: none;
+    margin: 0px;
+}
+.mobile_menu .dropdown .dropdown_inner ul li{
+    float: left;
+    margin: 0px;
+    width: 100%;
+}
+.mobile_menu .dropdown .dropdown_inner ul li a{
+    color: #000;
+    display: inline-block;
+    font-family: "Poppins";
+    font-weight: 500;
+    padding: 0px 0px;
+    text-decoration: none;
+}
+
+/*
+--------------------------------------------------
 	                04) PERFIL
 --------------------------------------------------
 */
@@ -440,7 +512,7 @@ body.opened .profile .content .left{
 }
 .profile .content .right{
     opacity: 0;
-    text-align: 200px;
+    text-align: right;
     top: 20px;
     transition: all .4s ease;
     padding-left: 200px;
