@@ -250,7 +250,6 @@ body.opened .navbar{
 }
 .navbar .logo img{
     max-height: 70px;
-    max-width: 70px;
 }
 .navbar .menu{
     align-items: center;
