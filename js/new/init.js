@@ -18,6 +18,7 @@ jQuery(document).ready(function(){
     service_popup();
     imgtosvg();
     data_images();
+	progress_bar();
 
     jQuery(window).load('body', function(){
         custom_load();
@@ -28,6 +29,10 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
 // -----------------------------------------------------
+
+function getBackgroundColor(element) {
+    return window.getComputedStyle(element).backgroundColor;
+}
 
 function cursor(){
 
@@ -43,7 +48,18 @@ function cursor(){
             o = !1;
             window.onmousemove = function (s) {
                 o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
-            }, $("body").on("mouseenter", "a,.topbar .trigger, .cursor-pointer", function () {
+				 // Verificar si el cursor está sobre la sección .skills
+				 let isCursorOverSkills = document.elementFromPoint(s.clientX, s.clientY).closest('.skills');
+    
+				 // Cambiar el color del cursor si está sobre .skills
+				 if (isCursorOverSkills) {
+					 document.querySelector(".cursor-inner").classList.add('white-cursor');
+					 document.querySelector(".cursor-outer").classList.add('white-cursor');
+				 } else {
+					 document.querySelector(".cursor-inner").classList.remove('white-cursor');
+					 document.querySelector(".cursor-outer").classList.remove('white-cursor');
+				 }
+			}, $("body").on("mouseenter", "a,.topbar .trigger, .cursor-pointer", function () {
                 e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
             }), $("body").on("mouseleave", "a,.topbar .trigger, .cursor-pointer", function () {
                 $(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
@@ -51,6 +67,7 @@ function cursor(){
         }
 	}
 };
+
 // -----------------------------------------------------
 // ---------------   PRELOADER   -----------------------
 // -----------------------------------------------------
@@ -282,3 +299,17 @@ function data_images(){
 // -----------------------------------------------------
 
 new WOW().init();
+
+// -----------------------------------------------------
+// ---------------   PROGRESS BAR    -------------------
+// -----------------------------------------------------
+
+function progress_bar() {
+    document.querySelectorAll('.progress_inner').forEach(function(progress) {
+        var value = progress.getAttribute('data-value'); // Obtiene el valor de data-value
+        var barIn = progress.querySelector('.bar_in');   // Encuentra el elemento bar_in
+        if (barIn) {
+            barIn.style.width = value + '%';             // Establece el ancho
+        }
+    });
+}

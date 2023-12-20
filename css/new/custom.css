@@ -600,7 +600,404 @@ body.opened .profile .down{
 
 /*
 --------------------------------------------------
-	                12) CURSOR
+	                05) PORTFOLIO
+--------------------------------------------------
+*/
+
+.main_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.main_title span{
+	display: inline-block;
+	margin-bottom: 10px;
+    color: #000;
+    font-family: "Poppins";
+	font-weight: 500;
+}
+.main_title h3{
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.portfolio{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 140px 0px 138px 0px;
+}
+
+/*
+--------------------------------------------------
+	                06) SKILLS
+--------------------------------------------------
+*/
+
+.skills{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding: 140px 0px 150px 0px;
+}
+.skills:before{
+	position: absolute;
+    content: "";
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;  
+    background-image: url(..//img/patterns/white-texture.png);
+    background-repeat: repeat;
+    opacity: .6; 
+    z-index: 2;
+}
+.skills:after{
+	position: absolute;
+    content: "";
+    top: 0px;
+   	bottom: 0px;
+   	left: 0px;
+   	right: 0px;
+   	background-color: #000;
+   	z-index: 1;
+}
+.main_title.light h3{
+	color: #fff;
+}
+.skills .skills_inner{
+	width: 100%;
+	float: left;
+	height: auto;
+	clear: both;
+	position: relative;
+	z-index: 3;
+}
+.skills .left{
+	width: 60%;
+	padding-right: 200px;
+}
+.skills .text{
+	width: 100%;
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 44px;
+}
+.skills .text p{
+	color: #bbb;
+}
+.dodo_progress{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.progress_inner{
+	width:100%;
+	margin-bottom:25px;
+}
+.progress_inner:last-child{
+	margin-bottom: 0px;
+}
+.progress_inner > span{
+	margin:0px 0px 11px 0px;
+	width:100%;
+	display:block;
+	text-align:left;
+	color: #fff;
+	font-family: "Poppins";
+}
+.progress_inner span.number{
+	float: right;
+}
+.progress_inner .background{
+	background:rgba(255,255,255,.09);
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:8px;
+}
+.progress_inner .background .bar_in{
+	height:100%;
+	background:#fff;
+	width:0px;
+	overflow:hidden;
+}
+.progress_inner .background .bar_in{
+	background:#fff;
+}
+.progress_inner .background .bar{
+	height:100%;
+}
+.progress_inner .background .bar.open{
+	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+
+@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+
+.skills .right{
+	width: 40%;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom:-220px;
+	overflow: hidden;
+}
+.skills .my_video{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.skills .my_image{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+.skills .right[data-background-style="video"] .my_image{display: none;}
+.skills .right[data-background-style="image"] .my_video{display: none;}
+
+
+/*
+--------------------------------------------------
+	                07) TIMELINE
+--------------------------------------------------
+*/
+
+.timeline{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 140px 0px 113px 0px;
+}
+.timeline .timeline_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 54px;
+}
+.timeline .timeline_list ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.timeline .timeline_list ul li{
+	margin: 0px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 27px 0px 30px 0px;
+}
+.timeline .timeline_list ul li:last-child{
+	border-bottom: none;
+}
+.timeline .timeline_list ul li .list_inner{
+	width: 33.3333%;
+    float: left;
+    padding-right: 40px;
+}
+.timeline .timeline_list ul li .list_inner:last-child{
+	padding-right: 0px;
+}
+.timeline .timeline_list ul li .list_inner span{
+	display: inline-block;
+	font-size: 18px;
+}
+.timeline .timeline_list ul li .list_inner:nth-child(2) span{
+	color: #000;
+}
+
+
+/*
+--------------------------------------------------
+	                08) CONTACT
+--------------------------------------------------
+*/
+
+.contact{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #f9f9f9;
+	padding: 140px 0px 119px 0px;
+}
+.contact .contact_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	margin-top: 40px;
+}
+.contact .left{
+	width: 50%;
+	padding-right: 100px;
+}
+.contact .left .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 42px;
+}
+.contact .short{
+	width: 100%;
+	float: left;
+}
+.contact .short ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.contact .short ul li{
+	margin: 0px 0px 23px 0px;
+	width: 100%;
+	float: left;
+}
+.contact .short ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	padding-left: 30px;
+}
+.contact .short ul li .list_inner .svg{
+	position: absolute;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+	margin-top: -1px;
+    transform: translateY(-50%);
+    color: #ff4522;
+}
+.contact .short ul li .list_inner span{
+	font-size: 18px;
+    color: #000;
+    font-family: "Poppins";
+}
+.contact .right{
+	width: 50%;
+	padding-left: 100px;
+}
+.contact .fields{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.contact .fields .first{
+	width: 100%;
+	float: left;
+}
+.contact .fields ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.contact .fields ul li{
+	width: 100%;
+	margin: 0px 0px 30px 0px;
+	float: left;
+}
+.contact .fields ul li input{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: transparent;
+}
+.contact .fields ul li input:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.3);
+}
+.contact .fields .last textarea{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 44px;
+	resize: none;
+	margin-bottom: 20px;
+	background-color: transparent;
+}
+.contact .fields .last textarea:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.3);
+} 
+.contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.contact .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+.button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.button a{
+	text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    display: block;
+	text-align: center;
+    padding: 8px 20px;
+    position: relative;
+	background-color: #ff4522;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.button a .svg{
+	position: relative;
+    top: 2px;
+    width: 17px;
+    height: 17px;
+    left: 10px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.button a:hover{
+	color: #fff;background-color: #000;
+}
+.button a:hover .svg{
+	transform: rotate(-50deg);
+}
+
+
+/*
+--------------------------------------------------
+	                9) CURSOR
 --------------------------------------------------
 */
 
@@ -650,10 +1047,16 @@ body.opened .profile .down{
     transform: translateZ(0);
     visibility: hidden;
 }
+.cursor-outer.white-cursor{
+    border-color: #FFF; /* para el cursor-outer */
+} 
+.cursor-inner.white-cursor {
+    background-color: #FFF; /* para el cursor-inner */
+}
 
 /*
 --------------------------------------------------
-	                13) MODALBOX
+	                10) MODALBOX
 --------------------------------------------------
 */
 
@@ -777,9 +1180,11 @@ body.opened .profile .down{
     border: 3px solid #fff;
 }
 
-/*---------------------------------------------------*/
-/*	11) COPYRIGHT
-/*---------------------------------------------------*/
+/*
+--------------------------------------------------
+	                11) COPYRIGHT
+--------------------------------------------------
+*/
 
 .copyright{
     background-color: #000;
@@ -818,9 +1223,11 @@ body.opened .profile .down{
     text-decoration: none;	
 }
 
-/*---------------------------------------------------*/
-/*	14) MEDIA QUERIES (SMALL DEVIVES)
-/*---------------------------------------------------*/
+/*
+--------------------------------------------------
+	        12) MEDIA QUERIES (SMALL DEVICES)
+--------------------------------------------------
+*/
 
 @media (max-width: 1400px) {
 	.container{max-width: 1170px;}
