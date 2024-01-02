@@ -1012,7 +1012,10 @@ body.opened .profile .down{
    	background-color: #000;
    	z-index: 1;
 }
-.main_title.light h3{
+.skills .main_title.light h3{
+	color: #fff;
+}
+.skills .main_title.light span{
 	color: #fff;
 }
 .skills .skills_inner{
