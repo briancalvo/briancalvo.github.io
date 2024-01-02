@@ -629,6 +629,353 @@ body.opened .profile .down{
 	padding: 140px 0px 138px 0px;
 }
 
+.portfolio .portfolio_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 92px;
+}
+.portfolio .portfolio_list .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.portfolio .portfolio_list .image{
+	position: relative;
+}
+.portfolio .portfolio_list .image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.portfolio .portfolio_list .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+	border-radius: 10px;
+}
+.portfolio .portfolio_list .overlay{
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background-color: #fff;
+	border-radius: 10px;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.portfolio .portfolio_list .list_inner:hover .overlay{
+	opacity: 1;
+	visibility: visible;
+}
+.portfolio .portfolio_list .details{
+	position: absolute;
+	z-index: 2;
+	bottom: 41px;
+	left: 49px;
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.portfolio .portfolio_list .list_inner:hover .details{
+	opacity: 1;
+	visibility: visible;
+}
+.portfolio .portfolio_list .details h3{
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+.portfolio .portfolio_list .details span{
+	font-family: "Poppins";
+}
+.portfolio .portfolio_list .list_inner .svg{
+	position: absolute;
+	top: 40px;
+	right: 39px;
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+	transform: rotate(-50deg);
+	color: #000;
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.portfolio .portfolio_list .list_inner:hover .svg{
+	opacity: 1;
+	visibility: visible;
+}
+.full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 5;
+}
+.swiper_progress{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	clear: both;
+	margin-top: 27px;
+}
+.swiper_progress .my_pagination_in{
+	float: left;
+	position: relative;
+}
+.swiper_progress span{
+	display: block;
+	float: left;
+	font-size: 16px;
+	letter-spacing: 0;
+	color: #000;
+	height: 22px;
+	line-height: 22px;
+}
+.swiper_progress .pagination_progress{
+	width: 100px;
+	margin: 0 20px;
+	position: relative;
+}
+.swiper_progress .pagination_progress .all{
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	top: 50%;
+	left: 0;
+	background-color: rgba(0,0,0,.2);
+}
+.swiper_progress .pagination_progress .all span{
+	height: 1px;
+	width: 100%;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	transform-origin: left top;
+	transform: scale(0);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.swiper_progress .my_navigation{
+	position: relative;
+	top: 6px;
+}
+.swiper_progress .my_navigation ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.swiper_progress .my_navigation ul li{
+	margin: 0px 10px 0px 0px;
+	display: inline-block;
+}
+.swiper_progress .my_navigation ul li:last-child{
+	margin-right: 0px;
+}
+.swiper_progress .my_navigation ul li a{
+	text-decoration: none;
+	color: #000;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.swiper_progress .my_navigation ul li a:hover{
+	color: #ff4522;
+}
+.swiper_progress .my_navigation ul li .svg{
+	width: 27px;
+	height: 27px;
+}
+.swiper_progress .my_navigation ul li .my_prev .svg{
+	transform: rotate(180deg);
+}
+.portfolio .hidden_content{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.modalbox .popup_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.modalbox .popup_details .top_image{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 37px;
+}
+.modalbox .popup_details .top_image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.modalbox .popup_details .top_image .main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+}
+.modalbox .portfolio_main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.modalbox .portfolio_main_title h3{
+	font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.modalbox .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-bottom: 60px;
+}
+.modalbox .main_details .textbox{
+	width: 70%;
+	padding-right: 40px;
+}
+.modalbox .main_details .textbox p{
+	margin-bottom: 15px;
+}
+.modalbox .main_details .textbox p:last-child{
+	margin-bottom: 0px;
+}
+.tokyo_tm_modalbox .main_details .detailbox{
+	width: 30%;
+	padding-left: 40px;
+}
+.modalbox .main_details .detailbox > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.modalbox .main_details .detailbox > ul > li{
+	margin: 0px 0px 8px 0px;
+	width: 100%;
+	float: left;
+}
+.modalbox .main_details .detailbox > ul > li:last-child{
+	margin-bottom: 0px;
+}
+.modalbox .main_details .detailbox .first{
+    font-weight: 700;
+	display: block;
+	color: #000;
+	margin-bottom: 3px;
+}
+.modalbox .main_details .detailbox span a{
+	text-decoration: none;
+	color: #767676;
+}
+.modalbox .main_details .detailbox .share{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 7px;
+}
+.modalbox .main_details .detailbox .share li{
+	margin: 0px 13px 0px 0px;
+	display: inline-block;
+}
+.modalbox .main_details .detailbox .share li:last-child{
+	margin-right: 0px;
+}
+.modalbox .main_details .detailbox .share li a{
+	text-decoration: none;
+	color: #000;
+}
+.modalbox .additional_images{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.modalbox .additional_images ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.modalbox .additional_images ul li{
+	margin: 0px 0px 30px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 30px;
+}
+.modalbox .additional_images ul li:nth-child(3n-2){
+	width: 100%;
+}
+.modalbox .additional_images ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.modalbox .additional_images ul li .my_image{
+	position: relative;
+}
+.modalbox .additional_images ul li .my_image img{
+	opacity: 0;
+	min-width: 100%;
+}
+.modalbox .additional_images ul li .my_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px;
+}
+
 /*
 --------------------------------------------------
 	                06) SKILLS

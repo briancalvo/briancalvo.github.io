@@ -16,8 +16,10 @@ jQuery(document).ready(function(){
     profile_image();
     down();
     service_popup();
+	portfolio_popup();
     imgtosvg();
     data_images();
+	swiper()
 	progress_bar();
 
     jQuery(window).load('body', function(){
@@ -277,6 +279,38 @@ function service_popup(){
 	});
 }
 
+// -------------------------------------------------
+// -----------  PORTFOLIO POPUP  -------------------
+// -------------------------------------------------
+
+function portfolio_popup(){
+	
+	"use strict";
+	
+	var modalBox		= jQuery('.modalbox');
+	var button			= jQuery('.portfolio .list_inner .portfolio_popup');
+	var closePopup		= modalBox.find('.close');
+	
+	button.on('click',function(){
+		var element = jQuery(this);
+		var parent 	= element.closest('.list_inner');
+		var content = parent.find('.hidden_content').html();
+		var image	= parent.find('.image .main').data('img-url');
+		var details = parent.find('.details').html();
+		modalBox.addClass('opened');
+		modalBox.find('.description_wrap').html(content);
+		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="images/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
+		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title">'+details+'<div>');
+		data_images();
+		return false;
+	});
+	closePopup.on('click',function(){
+		modalBox.removeClass('opened');
+		modalBox.find('.description_wrap').html('');
+		return false;
+	});
+}
+
 // -----------------------------------------------------
 // ---------------   DATA IMAGES    --------------------
 // -----------------------------------------------------
@@ -292,6 +326,71 @@ function data_images(){
 		var url				= element.data('img-url');
 		element.css({backgroundImage: 'url('+url+')'});
 	});
+}
+
+// -----------------------------------------------------
+// ---------------   SWIPER SLIDER    ------------------
+// -----------------------------------------------------
+
+function swiper(){
+	"use strict";
+	
+	$('.portfolio .portfolio_list,.news .news_list').each(function(){
+		var element 	= $(this);
+		var container 	= element.find('.swiper-container');
+		var mySwiper 	= new Swiper (container, {
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loopAdditionalSlides: 1,
+			autoplay: {
+				delay: 6000,
+			},
+			
+			navigation: {
+				nextEl: '.my_next',
+				prevEl: '.my_prev',
+			  },
+			
+			pagination: {
+				el: '.swiper_progress',
+				type: 'custom', // progressbar
+				renderCustom: function (swiper,current,total) {
+
+
+					// progress animation
+					var scale,translateX;
+					var progressDOM	= container.find('.swiper_progress');
+					if(progressDOM.hasClass('fill')){
+						translateX 	= '0px';
+						scale		= parseInt((current/total)*100)/100;
+					}else{
+						scale 		= parseInt((1/total)*100)/100;
+						translateX 	= (current-1) * parseInt((100/total)*100)/100 + 'px';
+					}
+
+
+					progressDOM.find('.all span').css({transform:'translate3d('+translateX+',0px,0px) scaleX('+scale+') scaleY(1)'});
+					if(current<10){current = '0' + current;}
+					if(total<10){total = '0' + total;}
+					progressDOM.find('.current').html(current);
+					progressDOM.find('.total').html(total);
+				}
+			},
+			breakpoints: {
+				700: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+				}
+			}
+		});
+	});
+	imgtosvg();
+	
 }
 
 // -----------------------------------------------------
