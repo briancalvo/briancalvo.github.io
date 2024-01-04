@@ -4,7 +4,7 @@
         <meta name="description" content="Brian Calvo | Personal Page">
         <meta name="author" content="Brian Calvo">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>Brian Calvo | Personal Page</title>
+        <title data-translate="metaTitle"></title>
         <!-- ESTILOS -->
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
@@ -31,31 +31,38 @@
             </div>
             <!-- /MODALBOX -->
             <div class="navbar">
-                <div class="wrapper">
+                <div class="wrapper">                    
                     <div class="navbar_inner">
                         <div class="logo">
                             <a href="#"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <div class="language">
+                            <div class="languageSelector">
+                                <button data-lang="en" onclick="loadLanguage('en')">EN</button>
+                                <button data-lang="es" onclick="loadLanguage('es')">ES</button>
+                                <button data-lang="ca" onclick="loadLanguage('ca')">CA</button>
+                            </div>
                         </div>
                         <div class="menu">
                             <div class="list">
                                 <ul class="nav">
                                     <li class="current">
-                                        <a href="#home">Home</a>
+                                        <a data-translate="menuHome" href="#home"></a>
                                     </li>
                                     <li>
-                                        <a href="#portfolio">Portfolio</a>
+                                        <a data-translate="menuPortfolio" href="#portfolio"></a>
                                     </li>
                                     <li>
-                                        <a href="#skills">Skills</a>
+                                        <a data-translate="menuSkills" href="#skills"></a>
                                     </li>
                                     <li>
-                                        <a href="#experience">Experience</a>
+                                        <a data-translate="menuExperience" href="#experience"></a>
                                     </li>
                                     <li>
-                                        <a href="#services">Services</a>
+                                        <a data-translate="menuServices" href="#services"></a>
                                     </li>
                                     <li>
-                                        <a href="#contact">Contact</a>
+                                        <a data-translate="menuContact" href="#contact"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -76,6 +83,13 @@
                         <div class="logo">
                             <a href="#"><img src="images/logo.png" alt=""></a>
                         </div>
+                        <div class="language">
+                            <div class="languageSelector">
+                                <button data-lang="en" onclick="loadLanguage('en')">EN</button>
+                                <button data-lang="es" onclick="loadLanguage('es')">ES</button>
+                                <button data-lang="ca" onclick="loadLanguage('ca')">CA</button>
+                            </div>
+                        </div>
                         <div class="trigger">
                             <div class="hamburger hamburger--slider">
                                 <div class="hamburger-box">
@@ -89,22 +103,22 @@
                     <div class="dropdown_inner">
                         <ul class="anchor_nav">
                             <li class="current">
-                                <a href="#home">Home</a>
+                                <a data-translate="menuHome" href="#home"></a>
                             </li>
                             <li>
-                                <a href="#portfolio">Portfolio</a>
+                                <a data-translate="menuPortfolio" href="#portfolio"></a>
                             </li>
                             <li>
-                                <a href="#skills">Skills</a>
+                                <a data-translate="menuSkills" href="#skills"></a>
                             </li>
                             <li>
-                                <a href="#experience">Experience</a>
+                                <a data-translate="menuExperience" href="#experience"></a>
                             </li>
                             <li>
-                                <a href="#services">Services</a>
+                                <a data-translate="menuServices" href="#services"></a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a data-translate="menuContact" href="#contact"></a>
                             </li>
                         </ul>
                     </div>
@@ -116,21 +130,21 @@
                         <div class="content">
                             <div class="left">
                                 <span class="name">Brian Calvo</span>
-                                <h3 class="job">Web Designer based in Spain</h3>
+                                <h3 data-translate="homeDescription" class="job"></h3>
                                 <div class="services">
                                     <ul>
                                         <li>
                                             <a href="#">
                                                 <img class="image" src="images/service/1.jpg" alt>
-                                                <span>Web Development</span>
+                                                <span data-translate="homeJob1"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" class="svg replaced-svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"></path></svg>
                                             </a>
                                             <div class="hidden_content">
                                                 <div class="popup_informations">
                                                     <div class="description">
-                                                        <p>"Currently, my training focuses on computer application development, and I've been fortunate to learn about emerging technologies, both on mobile platforms and the web, with a particular emphasis on the latter."</p>
-                                                        <p>"Although I possess a range of skills, I admit that my strengths lean towards frontend. My ability to present a website effectively and attractively ensures that users enjoy and value their browsing experience."</p>
-                                                        <p>"In any project I undertake, I strive to reflect my hardworking, meticulous, and ambitious nature, along with an innovative spirit. My goal is for each task to uphold the image of commitment and excellence I aim to convey."</p>
+                                                        <p data-translate="homeJobDescription1"></p>
+                                                        <p data-translate="homeJobDescription2"></p>
+                                                        <p data-translate="homeJobDescription3"></p>
                                                     </div>                                                    
                                                 </div>
                                             </div>
@@ -138,15 +152,15 @@
                                         <li>
                                             <a href="#">
                                                 <img class="image" src="images/service/2.jpg" alt>
-                                                <span>Project Management</span>
+                                                <span data-translate="homeJob2"></span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" class="svg replaced-svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"></path></svg>
                                             </a>
                                             <div class="hidden_content">
                                                 <div class="popup_informations">
                                                     <div class="description">
-                                                        <p>"At present, I've trained in the area of project management, where I've had the privilege of immersing myself in the latest methodologies and tools in the industry. This training has strengthened my abilities to coordinate and guide technological projects from start to finish, always ensuring their alignment with the proposed objectives."</p>
-                                                        <p>"However, beyond the techniques and tools, I recognize that my strength in project management lies in my ability to lead teams and guarantee effective communication among all involved parties. I understand the importance of every team member feeling valued and having clarity in their role, thus ensuring timely and quality delivery."</p>
-                                                        <p>"In every project I lead, I seek to reflect my hardworking, meticulous character with a forward-looking vision. Always in pursuit of excellence, I strive to show that these traits define me and ensure success in every task I undertake."</p>
+                                                        <p data-translate="homeJobDescription4"></p>
+                                                        <p data-translate="homeJobDescription5"></p>
+                                                        <p data-translate="homeJobDescription6"></p>
                                                     </div>                                                    
                                                 </div>
                                             </div>
@@ -158,7 +172,7 @@
                                         <li>
                                             <div class="list_inner">
                                                 <h3>7+</h3>
-                                                <span>Years of<br>Experience</span>
+                                                <p><span data-translate="homeYears1"></span><br><span data-translate="homeYears2"></span></p>
                                             </div>
                                         </li>
                                         <!-- <li>
@@ -190,8 +204,8 @@
                 <div class="portfolio">
                     <div class="container">
                         <div class="main_title">
-                            <span>Portfolio</span>
-                            <h3>Selected Works</h3>
+                            <span data-translate="portfolioTitle"></span>
+                            <h3 data-translate="portfolioSubtitle"></h3>
                         </div>
                         <div class="portfolio_list gallery_zoom wow fadeInUp" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-name: fadeInUp;">
                             <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
@@ -206,36 +220,36 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" class="svg replaced-svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"></path></svg>
                                             <div class="details">
                                                 <h3>Clínicas Podológicas IANES</h3>
-                                                <span>Website</span>
+                                                <span data-translate="portfolioWorkDetails1"></span>
                                             </div>
                                             <a class="full_link portfolio_popup" href="#"></a>
                                             <div class="hidden_content">
                                                 <div class="popup_details">
                                                     <div class="main_details">
                                                         <div class="textbox">
-                                                        <p>This extensive project involved creating custom WordPress templates for each section of the PlantillasDeportivas.es website. The overarching goal was to develop a cohesive and versatile web presence that aligned with the brand’s identity and offered an enhanced user experience across the entire site.</p> 
-                                                        <p>The success of this project went beyond creating visually appealing and functional templates; it was about weaving a consistent narrative across a website through thoughtful design and strategic development. The project showcased the synergy of technical skills and user-centric design principles in creating a versatile and cohesive online presence. Each section's unique requirements were addressed while maintaining a harmonious overall experience, demonstrating the ability to balance distinctiveness with unity. This endeavor highlights the critical role of adaptability, detailed planning, and user-focused design in modern web development, ensuring that each part of a website contributes meaningfully to the whole, both in terms of functionality and user experience.</p>
+                                                        <p data-translate="portfolioWorkMainDetails1"></p> 
+                                                        <p data-translate="portfolioWorkMainDetails2"></p>
                                                         </div>
                                                         <div class="detailbox">
                                                             <ul>
                                                                 <li>
-                                                                    <span class="first">Client</span>
+                                                                    <span data-translate="portfolioDetailBox1" class="first"></span>
                                                                     <span>WOM Barcelona</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="first">Category</span>
-                                                                    <span><a href="https://plantillasdeportivas.es">Website</a></span>
+                                                                    <span data-translate="portfolioDetailBox2" class="first"></span>
+                                                                    <span><a data-translate="portfolioDetailBox3" href="https://plantillasdeportivas.es"></a></span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="first">Date</span>
-                                                                    <span>March 07, 2017</span>
+                                                                    <span data-translate="portfolioDetailBox4" class="first"></span>
+                                                                    <span data-translate="portfolioDetailBox5"></span>
                                                                 </li>
                                                                 <li>
                                                                 <li>
-                                                                    <span class="first">Languages and Technologies Used</span>    
-                                                                    <span>HTML5, CSS3, JavaScript, jQuery, PHP and WordPress API</span>
+                                                                    <span data-translate="portfolioDetailBox6" class="first"></span>    
+                                                                    <span data-translate="portfolioDetailBox7"></span>
                                                                 </li>
-                                                                    <span class="first">Share</span>
+                                                                    <span data-translate="portfolioShare1" class="first"></span>
                                                                     <ul class="share">
                                                                         <li><a href="https://www.facebook.com/PlantiDepor/"><svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" class="svg replaced-svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"></path></svg></a></li>
                                                                         <li><a href="https://twitter.com/plantidepor"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="svg replaced-svg">
@@ -371,11 +385,12 @@
                         <div class="skills_inner">
                             <div class="left">
                                 <div class="main_title light">
-                                    <span>Skills</span>
-                                    <h3>Programming Skills</h3>
+                                    <span data-translate="skillsTitle"></span>
+                                    <h3 data-translate="skillsSubtitle"></h3>
                                 </div>
                                 <div class="text wow fadeInUp" data-wow-duration=".7s">
-                                    <p>With over 7 years in web development, I specialize in both front-end and back-end technologies, ranging from HTML and CSS to modern JavaScript frameworks and server-side development. Below is an overview of my proficiency in each language and technology.</p>                            </div>
+                                    <p data-translate="skillsDescription"></p>
+                                </div>
                                 <div class="dodo_progress wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".2s">
                                     <div class="progress_inner" data-value="95">
                                         <span>
@@ -456,86 +471,86 @@
                 <div class="timeline">
                     <div class="container">
                         <div class="main_title">
-                            <span>Experience</span>
-                            <h3>Working Period</h3>
+                            <span data-translate="experienceTitle"></span>
+                            <h3 data-translate="experienceSubtitle"></h3>
                         </div>
                         <div class="timeline_list">
                             <ul>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>February, 2022 - Today</span>
+                                        <span data-translate="experienceDate1"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>Service Manager</span>
+                                        <span data-translate="experienceJob1"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>SEDATEX S.A., Olesa de Montserrat</span>
+                                        <span data-translate="experienceCompany1"></span>
                                     </div>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.2s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>February, 2021 - Today</span>
+                                        <span data-translate="experienceDate2"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>Service Delivery Lead</span>
+                                        <span data-translate="experienceJob2"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>SEDATEX S.A., Olesa de Montserrat</span>
+                                        <span data-translate="experienceCompany1"></span>
                                     </div>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".4s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.4s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>February, 2020 - Today</span>
+                                        <span data-translate="experienceDate3"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>Functional Analyst &amp; Programmer</span>
+                                        <span data-translate="experienceJob3"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>SEDATEX S.A., Olesa de Montserrat</span>
+                                        <span data-translate="experienceCompany1"></span>
                                     </div>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".6s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.6s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>February, 2020 - July, 2020</span>
+                                        <span data-translate="experienceDate4"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>Web Developer</span>
+                                        <span data-translate="experienceJob4"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>HP, Sant Cugat del Vallés</span>
-                                    </div>
-                                </li>
-                                <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".8s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.8s; animation-name: fadeInUp;">
-                                    <div class="list_inner">
-                                        <span>June, 2018 - February, 2020</span>
-                                    </div>
-                                    <div class="list_inner">
-                                        <span>IT Services</span>
-                                    </div>
-                                    <div class="list_inner">
-                                        <span>MediaMarkt Iberia HQ, Barcelona Area</span>
+                                        <span data-translate="experienceCompany2"></span>
                                     </div>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".8s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.8s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>August, 2017 - March, 2018</span>
+                                        <span data-translate="experienceDate5"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>IT Support Technician</span>
+                                        <span data-translate="experienceJob5"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>SEAT, S.A., Martorell</span>
+                                        <span data-translate="experienceCompany3"></span>
                                     </div>
                                 </li>
                                 <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".8s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.8s; animation-name: fadeInUp;">
                                     <div class="list_inner">
-                                        <span>May, 2017 - September, 2017</span>
+                                        <span data-translate="experienceDate6"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>Engineer Technician 3D Printer</span>
+                                        <span data-translate="experienceJob6"></span>
                                     </div>
                                     <div class="list_inner">
-                                        <span>HP, Barcelona Area</span>
+                                        <span data-translate="experienceCompany4"></span>
+                                    </div>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".8s" style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                    <div class="list_inner">
+                                        <span data-translate="experienceDate7"></span>
+                                    </div>
+                                    <div class="list_inner">
+                                        <span data-translate="experienceJob7"></span>
+                                    </div>
+                                    <div class="list_inner">
+                                        <span data-translate="experienceCompany2"></span>
                                     </div>
                                 </li>
                             </ul>
@@ -547,13 +562,13 @@
                 <div class="contact">
                     <div class="container">
                         <div class="main_title">
-                            <span>Contact</span>
-                            <h3>Get in Touch</h3>
+                            <span data-translate="contactTitle"></span>
+                            <h3 data-translate="contactSubtitle"></h3>
                         </div>
                         <div class="contact_inner">
                             <div class="left wow fadeInUp" data-wow-duration=".7s" style="visibility: visible; animation-duration: 0.7s; animation-name: fadeInUp;">
                                 <div class="text">
-                                    <p>Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday</p>
+                                    <p data-translate="contactText"></p>
                                 </div>
                                 <div class="short">
                                     <ul>
@@ -602,7 +617,7 @@
                                                     <g>
                                                     </g>
                                                 </svg>
-                                                <span>Barcelona, Spain</span>
+                                                <span data-translate="contactCity"></span>
                                             </div>
                                         </li>
                                         <li>
@@ -704,7 +719,7 @@
                                 <div class="fields">
                                     <form action="/" method="post" class="contact_form" id="contact_form" autocomplete="off">
                                         <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-                                        <div class="empty_notice" style="display: none;"><span>Please Fill Required Fields</span></div>
+                                        <div class="empty_notice" style="display: none;"><span data-translate="contactForm1"></span></div>
                                         <div class="first">
                                             <ul>
                                                 <li>
@@ -719,7 +734,7 @@
                                             <textarea id="message" placeholder="Message"></textarea>
                                         </div>
                                         <div class="button" data-position="left">
-                                            <a id="send_message" href="#"><span>Submit</span><svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" class="svg replaced-svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"></path></svg></a>
+                                            <a id="send_message" href="#"><span data-translate="contactSubmit"></span><svg xmlns="http://www.w3.org/2000/svg" id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" class="svg replaced-svg"><path d="m37.379 12.552c-.799-.761-2.066-.731-2.827.069-.762.8-.73 2.066.069 2.828l15.342 14.551h-39.963c-1.104 0-2 .896-2 2s.896 2 2 2h39.899l-15.278 14.552c-.8.762-.831 2.028-.069 2.828.393.412.92.62 1.448.62.496 0 .992-.183 1.379-.552l17.449-16.62c.756-.755 1.172-1.759 1.172-2.828s-.416-2.073-1.207-2.862z"></path></svg></a>
                                         </div>
                                         
                                     </form>
@@ -734,7 +749,7 @@
                     <div class="container">
                         <div class="copyright_inner wow fadeInUp" data-wow-duration=".7s">
                             <div class="text">
-                                <p>Copyright &copy; 2023 Brian Calvo | All rights reserved.</p>
+                                <p><span data-translate="copyrightText1"></span><span>&copy;</span><span data-translate="copyrightText2"></span></p>
                             </div>
                             <div class="social">
                                 <ul>

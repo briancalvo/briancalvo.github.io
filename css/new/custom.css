@@ -304,6 +304,27 @@ body.opened .navbar{
 .trigger .hamburger{
 	padding: 0px;
 }
+.language {
+	margin-left: auto;
+	display: inline-flex;
+	margin-right: 20px;
+}
+.languageSelector button{
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	outline: none;
+	color: #000;
+	font-family: "Poppins";
+	text-decoration: none;
+	transition: all .3s ease;
+	font-size: 16px;
+	border: none;
+}
+.selectedLanguage {
+    font-weight: bold;
+}
 
 /*
 --------------------------------------------------

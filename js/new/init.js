@@ -21,6 +21,7 @@ jQuery(document).ready(function(){
     data_images();
 	swiper()
 	progress_bar();
+	loadLanguage('en');
 
     jQuery(window).load('body', function(){
         custom_load();
@@ -191,6 +192,29 @@ function down(){
     })
 
 }
+
+// ----------------------------------------------------------------
+// ---------------    LANGUAGE SELECTOR    ------------------------
+// ----------------------------------------------------------------
+
+function loadLanguage(lang) {
+    $.getJSON(`i18n/${lang}.json`, function(data) {
+        updateContent(data);
+    }).fail(function() {
+        console.error('Error loading language file');
+    });
+
+    $('.languageSelector button').removeClass('selectedLanguage');
+    $(`.languageSelector button[data-lang="${lang}"]`).addClass('selectedLanguage');
+}
+
+function updateContent(data) {
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    element.textContent = data[key] || 'Key not found';
+  });
+}
+
 
 // --------------------------------------------------------------
 // -----------------    PROFILE IMAGE    ------------------------
