@@ -4,30 +4,29 @@
 */
 
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function() {
 
-    "user strict";
+    "use strict"; 
 
-    // Ejecuta todas la funciones
-    
     cursor();
     nav_bg();
     trigger_menu();
     profile_image();
     down();
     service_popup();
-	portfolio_popup();
+    portfolio_popup();
     imgtosvg();
     data_images();
-	swiper()
-	progress_bar();
-	loadLanguage('en');
+    swiper();
+    progress_bar();
+    loadLanguage('en');
+	contact_form();
 
-    jQuery(window).load('body', function(){
+    jQuery(window).on('load', function() {
         custom_load();
     });
-
 });
+
 
 // -----------------------------------------------------
 // ------------------   CURSOR    ----------------------
@@ -433,6 +432,30 @@ function progress_bar() {
         var barIn = progress.querySelector('.bar_in');   // Encuentra el elemento bar_in
         if (barIn) {
             barIn.style.width = value + '%';             // Establece el ancho
+        }
+    });
+}
+
+// -----------------------------------------------------
+// ---------------   CONTACT FORM    -------------------
+// -----------------------------------------------------
+
+function contact_form() {
+    "use strict";
+    jQuery(".contact_form #send_message").on('click', function(e) { 
+        e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+        var name = jQuery("#name").val();
+        var email = jQuery("#email").val();
+        var message = jQuery("#message").val();
+        
+        jQuery(".contact_form .returnmessage").empty(); // Limpiar mensajes previos
+
+        if (name === '' || email === '' || message === '') {
+            jQuery('.empty_notice').slideDown(500).delay(2000).slideUp(500);
+        } else {
+            // Si todo está bien, enviar el formulario
+            jQuery("#contact_form").submit();
         }
     });
 }
