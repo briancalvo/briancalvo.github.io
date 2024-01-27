@@ -21,6 +21,7 @@ jQuery(document).ready(function() {
     progress_bar();
     loadLanguage('en');
 	contact_form();
+	dark_mode();
 
     jQuery(window).on('load', function() {
         custom_load();
@@ -457,5 +458,31 @@ function contact_form() {
             // Si todo está bien, enviar el formulario
             jQuery("#contact_form").submit();
         }
+    });
+}
+
+// -----------------------------------------------------
+// -----------------   DARK MODE    --------------------
+// -----------------------------------------------------
+
+function applyTheme(isDarkMode) {
+	const logo = document.getElementById('logo');
+
+    if (isDarkMode) {
+        document.body.classList.add('dark');
+		if (logo) logo.src = 'images/logo/dark.png';
+    } else {
+        document.body.classList.remove('dark');
+		if (logo) logo.src = 'images/logo/light.png';
+    }
+}
+
+function dark_mode() {
+    const mediaQueryList = window.matchMedia('(prefers-color-scheme: dark)');
+    applyTheme(mediaQueryList.matches); // Aplica el tema inicialmente basado en la preferencia actual
+
+    // Escucha cambios en la preferencia de esquema de color
+    mediaQueryList.addEventListener('change', (e) => {
+        applyTheme(e.matches);
     });
 }
