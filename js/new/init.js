@@ -466,15 +466,10 @@ function contact_form() {
 // -----------------------------------------------------
 
 function applyTheme(isDarkMode) {
-	const logo = document.getElementById('logo');
-
-    if (isDarkMode) {
-        document.body.classList.add('dark');
-		if (logo) logo.src = 'images/logo/dark.png';
-    } else {
-        document.body.classList.remove('dark');
-		if (logo) logo.src = 'images/logo/light.png';
-    }
+    document.body.classList.toggle('dark', isDarkMode);
+    const theme = isDarkMode ? 'dark' : 'light';
+    const logos = document.querySelectorAll('#logo_mobile, #logo_navbar');
+    logos.forEach(logo => logo.src = `images/logo/${theme}.png`);
 }
 
 function dark_mode() {
